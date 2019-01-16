@@ -1,0 +1,13 @@
+
+<ul>
+  <% @dogs.each do |d|  %>
+    <li><%= link_to d.name, dog_path(d) %></li>
+  <% end %>
+</ul>
+
+
+<ul>
+  <% @scooby.each do |d| %>
+    <li><%= link_to d.name + " " + d.employees.count.to_s, dog_path(d) %></li>
+  <% end %>
+</ul>
